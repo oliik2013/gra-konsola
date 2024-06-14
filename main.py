@@ -1,6 +1,7 @@
 import keyboard
 import os
 from time import sleep
+import pyautogui
 clear = lambda: os.system('cls')
 clear()
 print("Witaj w grze tylko na konsole")
