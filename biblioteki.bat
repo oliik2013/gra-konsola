@@ -11,4 +11,6 @@ pip install logging
 
 cls
 
+echo Zainstalowano wszystkie biblioteki.
+
 pause
