@@ -13,15 +13,15 @@ pyautogui.alert(text='Jeśli twój komputer nie wytrzymuje tej gry to zmień w s
 sleep(1)
 clear()
 x = 14
-y = 0
+y = 1
 d1 = "############################"
-d2 = "#                          #"
+d2 = "#                          #" # Tutaj y = 6
 d3 = "#                          #"
 d4 = "#                          #" 
 d5 = "#                          #"
 d6 = "#                          #"
-d7 = "#                          #"
-d8 = "#############v##############" # Tutaj y = 0
+d7 = "#            v             #" # Tutaj y = 1
+d8 = "############################" 
     #Tutaj x = 14 /\
 
 while True:
@@ -37,7 +37,41 @@ while True:
     sleep(fps)
     
     if keyboard.read_key() == "w":
-        y += 1
-        print(y)
+        if y == 1 or 2 or 3 or 4 or 5:
+            y += 1
+        if y == 2 and x == 14:
+            d7 = "#                          #"
+            d6 = "#            v             #"
+        if y == 3 and x == 14:
+            d6 = "#                          #"
+            d5 = "#            v             #"
+        if y == 4 and x == 14:
+            d5 = "#                          #"
+            d4 = "#            v             #"
+        if y == 5 and x == 14:
+            d4 = "#                          #"
+            d3 = "#            v             #"
+        if y == 6 and x == 14:
+            d3 = "#                          #"
+            d2 = "#            v             #"
+
+    if keyboard.read_key() == "s":
+        if y == 2 or 3 or 4 or 5 or 6:
+            y -= 1
+        if y == 2 and x == 14:
+            d6 = "#                          #"
+            d7 = "#            v             #"
+        if y == 3 and x == 14:
+            d5 = "#                          #"
+            d6 = "#            v             #"
+        if y == 4 and x == 14:
+            d4 = "#                          #"
+            d5 = "#            v             #"
+        if y == 5 and x == 14:
+            d3 = "#                          #"
+            d4 = "#            v             #"
+        if y == 6 and x == 14:
+            d2 = "#                          #"
+            d3 = "#            v             #"
 
     clear()
