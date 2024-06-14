@@ -8,19 +8,21 @@ from pynput.keyboard import Key, Listener
 fps = 0.1
 clear = lambda: os.system('cls')
 clear()
-print("Witaj w grze tylko na konsole")
+print("Witaj w grze tylko na konsole (nie dotyczy ostrzeżenia)")
 pyautogui.alert(text='Jeśli twój komputer nie wytrzymuje tej gry to zmień w skrzypcie zmienną fps na wyszą.', title='Info', button='Ok')
 sleep(1)
 clear()
+x = 14
+y = 0
 d1 = "############################"
 d2 = "#                          #"
 d3 = "#                          #"
-d4 = "#                          #"
+d4 = "#                          #" 
 d5 = "#                          #"
 d6 = "#                          #"
 d7 = "#                          #"
-d8 = "############################"
-
+d8 = "#############v##############" # Tutaj y = 0
+    #Tutaj x = 14 /\
 
 while True:
     print(d1)
@@ -33,4 +35,9 @@ while True:
     print(d8)
 
     sleep(fps)
+    
+    if keyboard.read_key() == "w":
+        y += 1
+        print(y)
+
     clear()
