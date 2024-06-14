@@ -44,7 +44,7 @@ while True:
             d6 = "#            v             #"
         if y == 3 and x == 14:
             d6 = "#                          #"
-            d5 = "#            v             #"
+            d5 = "#            v             #" 
         if y == 4 and x == 14:
             d5 = "#                          #"
             d4 = "#            v             #"
@@ -54,10 +54,12 @@ while True:
         if y == 6 and x == 14:
             d3 = "#                          #"
             d2 = "#            v             #"
+        if y == 7:
+            y = 6
 
     if keyboard.read_key() == "s":
-        if y == 2 or 3 or 4 or 5 or 6:
-            y -= 1
+        if y == 1:
+            y = 2
         if y == 2 and x == 14:
             d6 = "#                          #"
             d7 = "#            v             #"
@@ -73,5 +75,9 @@ while True:
         if y == 6 and x == 14:
             d2 = "#                          #"
             d3 = "#            v             #"
+        if y == 2 or 3 or 4 or 5 or 6:
+            y -= 1
 
     clear()
+
+    
