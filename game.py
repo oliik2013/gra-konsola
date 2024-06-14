@@ -2,7 +2,7 @@ import keyboard
 normal = "#               #"
 block =  "#################"
 
-for x in range(15):
-    x = " "
-    z = x
+x = 10
+z = " "*
+v = ""
 print("#",z,"#")
