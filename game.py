@@ -1,4 +1,8 @@
 import keyboard
 normal = "#               #"
 block =  "#################"
-p = print
+
+for x in range(15):
+    x = " "
+    z = x
+print("#",z,"#")
