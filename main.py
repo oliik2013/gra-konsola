@@ -3,9 +3,13 @@ import os
 from time import sleep
 import pyautogui
 import pynput
+import logging
+from pynput.keyboard import Key, Listener
+fps = 0.1
 clear = lambda: os.system('cls')
 clear()
 print("Witaj w grze tylko na konsole")
+pyautogui.alert(text='Jeśli twój komputer nie wytrzymuje tej gry to zmień w skrzypcie zmienną fps na wyszą.', title='Info', button='Ok')
 sleep(1)
 clear()
 d1 = "############################"
@@ -28,5 +32,5 @@ while True:
     print(d7)
     print(d8)
 
-    sleep(0.1)
+    sleep(fps)
     clear()
