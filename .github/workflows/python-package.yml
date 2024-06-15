@@ -30,7 +30,6 @@ jobs:
         python -m pip install flake8 pytest
         pip install keyboard
         pip install pyautogui
-        pip install os
         pip install pynput
         pip install logging
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
