@@ -1,18 +1,20 @@
-import keyboard
 import os
 from time import sleep
-import pyautogui
-import pynput
-import logging
-from pynput.keyboard import Key, Listener
+from sys import platform
 fps = 0.1
-clear = lambda: os.system('cls')
+if platform == "win32":
+    clear = lambda: os.system('cls')
+if platform == "linux" or platform == "linux2":
+    clear = lambda: os.system('clear')
 clear()
 print("Witaj w grze tylko na konsole (nie dotyczy ostrzeżenia)")
-pyautogui.alert(text='Jeśli twój komputer nie wytrzymuje tej gry to zmień w skrzypcie zmienną fps na wyszą.', title='Info', button='Ok')
+sleep(1)
+clear()
+print("INFO: Jeśli twój komputer nie wytrzymuje tej gry to zmień w skrzypcie zmienną fps na wyszą.")
 sleep(1)
 clear()
 x = 14
+## Hi
 y = 1
 d1 = "############################"
 d2 = "#                          #" # Tutaj y = 6
@@ -36,7 +38,7 @@ while True:
 
     sleep(fps)
     
-    if keyboard.read_key() == "w":
+    if guzik == "w":
         if y == 1 or 2 or 3 or 4 or 5:
             y += 1
         if y == 2 and x == 14:
@@ -57,7 +59,7 @@ while True:
         if y == 7:
             y = 6
 
-    if keyboard.read_key() == "s":
+    if guzik == "s":
         if y == 1:
             y = 2
         if y == 2 and x == 14:
