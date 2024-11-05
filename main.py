@@ -1,4 +1,5 @@
 import os
+import readchar
 from time import sleep
 from sys import platform
 fps = 0.1
@@ -37,6 +38,8 @@ while True:
     print(d8)
 
     sleep(fps)
+
+    guzik = readchar.readkey()
     
     if guzik == "w":
         if y == 1 or 2 or 3 or 4 or 5:

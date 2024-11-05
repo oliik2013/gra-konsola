@@ -2,7 +2,7 @@
 
 title Instaluje...
 
-pip install pynput
+pip install readchar
 
 cls
 
