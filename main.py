@@ -8,7 +8,7 @@ if platform == "win32":
 if platform == "linux" or platform == "linux2":
     clear = lambda: os.system('clear')
 clear()
-print("Witaj w grze tylko na konsole (nie dotyczy ostrzeżenia)")
+print("Witaj w grze tylko na konsole.")
 sleep(1)
 clear()
 print("INFO: Jeśli twój komputer nie wytrzymuje tej gry to zmień w skrzypcie zmienną fps na wyszą.")
@@ -41,7 +41,7 @@ while True:
 
     guzik = readchar.readkey()
     
-    if guzik == "w":
+    if guzik == "w" or "W":
         if y == 1 or 2 or 3 or 4 or 5:
             y += 1
         if y == 2 and x == 14:
@@ -62,7 +62,7 @@ while True:
         if y == 7:
             y = 6
 
-    if guzik == "s":
+    if guzik == "s" or "S":
         if y == 1:
             y = 2
         if y == 2 and x == 14:
@@ -82,6 +82,28 @@ while True:
             d3 = "#            v             #"
         if y == 2 or 3 or 4 or 5 or 6:
             y -= 1
+
+    if guzik == "a" or "A":
+        if x == 14:
+            x = 13
+        if x == 13 and y == 1:
+            d6 = "#                          #"
+            d7 = "#            v             #"
+        if x == 12 and y == 2:
+            d5 = "#                          #"
+            d6 = "#           v              #"
+        if x == 11 and y == 3:
+            d4 = "#                          #"
+            d5 = "#          v               #"
+        if x == 10 and y == 4:
+            d3 = "#                          #"
+            d4 = "#         v                #"
+        if x == 9 and y == 5:
+            d2 = "#                          #"
+            d3 = "#        v                 #"
+        if x == 8 or 7 or 6 or 5 or 4:
+            x -= 1
+
 
     clear()
 
